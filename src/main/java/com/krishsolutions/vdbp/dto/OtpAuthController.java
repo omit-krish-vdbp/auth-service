@@ -4,7 +4,7 @@ package com.krishsolutions.vdbp.controller;
 import com.krishsolutions.vdbp.dto.AuthResponse;
 import com.krishsolutions.vdbp.dto.OtpRequest;
 import com.krishsolutions.vdbp.dto.OtpVerifyRequest;
-import com.krishsolutions.vdbp.service.OtpAuthService;
+import com.krishsolutions.vdbp.service.EmailOtpService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth/otp")
 public class OtpAuthController {
 
-    private final OtpAuthService otpAuthService;
+    private final EmailOtpService emailOtpService;
 
-    public OtpAuthController(OtpAuthService otpAuthService) {
-        this.otpAuthService = otpAuthService;
+    public OtpAuthController(EmailOtpService emailOtpService) {
+        this.emailOtpService = emailOtpService;
     }
     @PostMapping("/request")
     public ResponseEntity<String> requestOtp(
