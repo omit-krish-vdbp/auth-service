@@ -27,10 +27,11 @@ public class SpringSecurity {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/api/auth/signup",
-                                "/api/auth/request-otp",
-                                "/api/auth/verify-otp"
+                                "/api/auth/hello",
+                                "/api/auth/verify",
+                                "/api/auth/otp/request",
+                                "/api/auth/otp/verify"
                         ).permitAll()
-
                         .anyRequest().authenticated()
                 );
 

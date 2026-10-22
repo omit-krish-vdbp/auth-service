@@ -1,9 +1,6 @@
-package com.krishsolutions.vdbp.controller;
+package com.krishsolutions.vdbp.dto;
 
 
-import com.krishsolutions.vdbp.dto.AuthResponse;
-import com.krishsolutions.vdbp.dto.OtpRequest;
-import com.krishsolutions.vdbp.dto.OtpVerifyRequest;
 import com.krishsolutions.vdbp.service.EmailOtpService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
